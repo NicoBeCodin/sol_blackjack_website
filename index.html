@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Solana Blackjack</title>
+    <script type="module" crossorigin src="/sol_blackjack_website/assets/index-B-8ECYVW.js"></script>
+    <link rel="stylesheet" crossorigin href="/sol_blackjack_website/assets/index-CFWYXwm2.css">
+  </head>
+  <body>
+    <!-- Header Section -->
+    <div class="header">
+      <div class="dropdown">
+        <button class="help-btn">How to play ?</button>
+        <div class="dropdown-content">
+          <h3>Instructions</h3>
+          <p>Welcome to Solana Blackjack!</p>
+          <ol>
+            <li>Connect your wallet or generate a local keypair.</li>
+            <li>Request an airdrop if needed.</li>
+            <li>Use the PDA account balance options to manage funds.</li>
+            <li>Place bets, hit, or stand to play the game.</li>
+            <li>Admin options are for debugging but you can add funds to the treasury account if it's empty.</li>
+          </ol>
+          <p>Enjoy the game!</p>
+        </div>
+      </div>
+      <a
+        class="github-link"
+        href="https://github.com/NicoBeCodin"
+        target="_blank"
+      >
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          alt="GitHub Icon"
+        />
+        Coded by NicoBeCodin
+      </a>
+    </div>
+
+    <div class="container">
+      <!-- Main Content (Groups) -->
+      <div class="content">
+        <h1>Solana Blackjack</h1>
+
+        <!-- Wallet Actions -->
+        <div class="group">
+          <h2>Wallet Actions</h2>
+          <div class="group-content">
+            <button id="connectWalletBtn">Connect Wallet</button>
+            <button id="generateLocalKeypairBtn">Generate Local Keypair</button>
+            <button id="requestAirdropBtn">Request Airdrop</button>
+          </div>
+          <p id="walletInfo"></p>
+        </div>
+
+        <!-- PDA Account Balance -->
+        <div class="group">
+          <h2>PDA Account Balance</h2>
+          <div class="group-content">
+            <button id="initGameBtn">Initialize Game</button>
+            <button id="getBalancesBtn">Get Balances</button>
+            <p id="balancesInfo"></p>
+            <div>
+              <button id="addFundsBtn">Add Funds</button>
+              <input
+                type="number"
+                id="addFundsAmount"
+                placeholder="Enter amount in lamports"
+              />
+            </div>
+            <div>
+              <button id="withdrawFundsBtn">Withdraw Funds</button>
+              <input
+                type="number"
+                id="withdrawFundsAmount"
+                placeholder="Enter amount to withdraw"
+              />
+              
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Game Actions -->
+        <div class="group">
+          <h2>Game Actions</h2>
+          <div class="group-content">
+            <div>
+              <button id="placeBetBtn">Place Bet</button>
+              <input
+                type="number"
+                id="betAmount"
+                placeholder="Bet amount in lamports"
+              />
+            </div>
+            <button id="hitBtn">Hit</button>
+            <button id="standBtn">Stand</button>
+          </div>
+        </div>
+
+        <!-- Admin Options -->
+        <div class="admin-section">
+          <button id="toggleAdminBtn">Show Admin Options</button>
+          <div id="adminOptions" class="group hidden">
+            <h2>Admin Options</h2>
+            <div class="group-content">
+              <div>
+                <button id="addTreasuryBtn">Add to Treasury</button>
+                <input
+                  type="number"
+                  id="treasuryAddAmount"
+                  placeholder="Amount to add to treasury"
+                />
+              </div>
+              <div>
+                <button id="withdrawTreasuryBtn">Withdraw from Treasury</button>
+                <input
+                  type="number"
+                  id="treasuryWithdrawAmount"
+                  placeholder="Amount to withdraw from treasury"
+                />
+              </div>
+              <button id="resetGameBtn">Reset Game</button>
+              <button id="initTreasuryBtn">Initialize Treasury</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logs Section -->
+      <div class="logs">
+        <h3>Program Logs</h3>
+        <textarea id="logs" rows="30" cols="60" readonly></textarea>
+      </div>
+    </div>
+
+  </body>
+</html>
